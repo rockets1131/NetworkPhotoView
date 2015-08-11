@@ -92,7 +92,7 @@ public class NetworkPhotoView extends ImageView implements IPhotoView {
     void loadImageIfNecessary(final boolean isInLayoutPass) {
         int width = getWidth();
         int height = getHeight();
-        ScaleType scaleType = getScaleType();
+        ScaleType scaleType = super.getScaleType();
 
         boolean wrapWidth = false, wrapHeight = false;
         if (getLayoutParams() != null) {

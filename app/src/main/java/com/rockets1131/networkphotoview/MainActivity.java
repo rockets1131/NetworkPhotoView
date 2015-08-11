@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
 import com.rockets1131.networkphotoview.widget.NetworkPhotoView;
 
@@ -20,9 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         NetworkPhotoView networkPhotoView = (NetworkPhotoView)findViewById(R.id.networkphotoview);
+        //NetworkImageView networkPhotoView = (NetworkImageView)findViewById(R.id.networkphotoview);
+
         lruImageCache = LruImageCache.instance();
         rQueue = Volley.newRequestQueue(this);
         imageLoader = new ImageLoader(rQueue, lruImageCache);
-        networkPhotoView.setImageUrl("http://i6.topit.me/6/5d/45/1131907198420455d6o.jpg", imageLoader);
+        networkPhotoView.setImageUrl("http://pic.nipic.com/2008-05-07/20085722191339_2.jpg", imageLoader);
     }
 }
