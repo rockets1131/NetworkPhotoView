@@ -7,8 +7,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.RectF;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.widget.ImageView;
@@ -20,9 +18,7 @@ import uk.co.senab.photoview.PhotoViewAttacher.OnPhotoTapListener;
 import uk.co.senab.photoview.PhotoViewAttacher.OnViewTapListener;
 
 import android.text.TextUtils;
-import android.util.AttributeSet;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.ImageView;
 
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
