@@ -158,7 +158,6 @@ public class NetworkPhotoView extends ImageView implements IPhotoView {
                         }
 
                         if (response.getBitmap() != null) {
-                            //
                             setImageBitmap(response.getBitmap());
                             if (null != mAttacher) {
                                 mAttacher.update();
@@ -331,31 +330,6 @@ public class NetworkPhotoView extends ImageView implements IPhotoView {
     public void setScaleLevels(float minimumScale, float mediumScale, float maximumScale) {
         mAttacher.setScaleLevels(minimumScale, mediumScale, maximumScale);
     }
-
-    /*@Override
-    // setImageBitmap calls through to this method
-    public void setImageDrawable(Drawable drawable) {
-        super.setImageDrawable(drawable);
-        if (null != mAttacher) {
-            mAttacher.update();
-        }
-    }
-
-    @Override
-    public void setImageResource(int resId) {
-        super.setImageResource(resId);
-        if (null != mAttacher) {
-            mAttacher.update();
-        }
-    }
-
-    @Override
-    public void setImageURI(Uri uri) {
-        super.setImageURI(uri);
-        if (null != mAttacher) {
-            mAttacher.update();
-        }
-    }*/
 
     @Override
     public void setOnMatrixChangeListener(OnMatrixChangedListener listener) {
